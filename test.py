@@ -41,3 +41,13 @@ def multipliers():
     return [lambda x: i * x for i in range(4)]
 
 print([m(2) for m in multipliers()])
+
+from enum import Enum
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+print Month.Jan
+for name, member in Month.__members__.items():
+    print(name, '=>', member, ',', member.value)
+
+season=['spring','summer','fall','winter']
+print list(enumerate(season))
+

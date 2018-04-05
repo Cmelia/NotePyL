@@ -4,11 +4,10 @@ for n in range(0,100,10):
             if index >=n and index < n+10:
                 writer.write(line)
 
-f=open("pwd","r")
-f.readline()
-f.close()
+
 
 with open('txt') as f:
     for line in f.readlines():
         print line.split('\t')[0]
+
 
