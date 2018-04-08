@@ -6,6 +6,7 @@ for i in range(100):
     f.write( str(i)+"\n" )
 f.seek(0)
 
+'''
 for i in range(10):
     path1 = os.path.expanduser(r"~/hello_world_%s.txt" % i)
     with open(path1,'w') as f1:
@@ -15,6 +16,12 @@ for i in range(10):
     f.seek((i+1)*10)
     print((i+1)*10)
 f.close()
-
+'''
+path1 = os.path.expanduser(r"~/hello_world_%s.txt" % i)
+for n in range(0,100,10):
+    with open(path, 'r') as reader, open(path1, 'w') as writer:
+        for index, line in enumerate(reader):
+            if index >=n and index < n+10:
+                writer.write(line)
 
 
