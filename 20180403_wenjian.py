@@ -17,8 +17,9 @@ for i in range(10):
     print((i+1)*10)
 f.close()
 '''
-path1 = os.path.expanduser(r"~/hello_world_%s.txt" % i)
+
 for n in range(0,100,10):
+    path1 = os.path.expanduser(r"~/hello_world_%s.txt" % n)
     with open(path, 'r') as reader, open(path1, 'w') as writer:
         for index, line in enumerate(reader):
             if index >=n and index < n+10:
